@@ -57,23 +57,23 @@ public class PersonaControlador {
     
 
     public void crearPersona(PersonaModelo p) {
-        try {
-            String SQL = "call sp_CrearPersona('" + persona.getNombres() + "','" + persona.getApellidos() + "'," + persona.getCedula()
-                    + ",'" + persona.getUsuario() + "','" + persona.getClave() + "')";
-            ejecutar = (PreparedStatement) conectado.prepareCall(SQL);
-            int res = ejecutar.executeUpdate();
-            //executeUpdate cuando esxribo la base de datos
-            //int res cuando escribo
-            if (res > 0) {
-                JOptionPane.showMessageDialog(null, "Usuario creado");
-            } else {
-                JOptionPane.showMessageDialog(null, "Resvise la información ingresada");
-            }
-            ejecutar.close();
-        } catch (SQLException e) {
-            System.out.println("ERROR EN LA CONEXIÓN" + e);
+    try {
+        String SQL = "call sp_CrearPersona('" + p.getNombres() + "','" + p.getApellidos() + "'," + p.getCedula()
+                + ",'" + p.getUsuario() + "','" + p.getClave() + "')";
+        ejecutar = (PreparedStatement) conectado.prepareCall(SQL);
+        int res = ejecutar.executeUpdate();
+        //executeUpdate cuando esxribo la base de datos
+        //int res cuando escribo
+        if (res > 0) {
+            JOptionPane.showMessageDialog(null, "Usuario creado");
+        } else {
+            JOptionPane.showMessageDialog(null, "Resvise la información ingresada");
         }
+        ejecutar.close();
+    } catch (SQLException e) {
+        System.out.println("ERROR EN LA CONEXIÓN" + e);
     }
+}
 
     public ArrayList<Object[]> datosPersonas() {
         ArrayList<Object[]> listaTotalRegistros = new ArrayList<>();

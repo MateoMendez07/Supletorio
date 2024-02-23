@@ -6,7 +6,7 @@ package DIU.Modelo;
 
 /**
  *
- * @author oli
+ * @author 
  */
 public class PersonaModelo {
     private int idpersona;

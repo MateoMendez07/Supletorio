@@ -35,6 +35,7 @@ public class Menu extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         gestion = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
+        opLibros = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,6 +77,14 @@ public class Menu extends javax.swing.JFrame {
         });
         gestion.add(jMenuItem4);
 
+        opLibros.setText("Libros");
+        opLibros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opLibrosActionPerformed(evt);
+            }
+        });
+        gestion.add(opLibros);
+
         jMenuBar1.add(gestion);
 
         setJMenuBar(jMenuBar1);
@@ -107,6 +116,13 @@ public class Menu extends javax.swing.JFrame {
         escritorio.add(ventanaPersonaView);
         ventanaPersonaView.show();
     }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void opLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opLibrosActionPerformed
+        // TODO add your handling code here:
+        LibrosView ventanaLV =new LibrosView();
+        escritorio.add(ventanaLV);
+        ventanaLV.show();
+    }//GEN-LAST:event_opLibrosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,5 +167,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenu menuFichaV;
+    private javax.swing.JMenuItem opLibros;
     // End of variables declaration//GEN-END:variables
 }
