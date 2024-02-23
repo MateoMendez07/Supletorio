@@ -6,78 +6,51 @@ package DIU.Modelo;
 
 /**
  *
- * @author 
+ * @author alen
  */
 public class PersonaModelo {
-    private int idpersona;
-    private String nombres,apellidos,cedula,usuario,clave;
-    
 
-    public PersonaModelo() {
-    }
+    private int id;
+    private String cedula;
+    private String nombresCompletos;
 
-    public PersonaModelo(int idpersona, String nombres, String apellidos, String cedula, String usuario, String clave) {
-        this.idpersona = idpersona;
-        this.nombres = nombres;
-        this.apellidos = apellidos;
+    public PersonaModelo(int id, String cedula, String nombresCompletos) {
+        this.id = id;
         this.cedula = cedula;
-        this.usuario = usuario;
-        this.clave = clave;
+        this.nombresCompletos = nombresCompletos;
     }
 
-    
-
-    public int getIdpersona() {
-        return idpersona;
-    }
-
-    public void setIdpersona(int idpersona) {
-        this.idpersona = idpersona;
-    }
-    
-
-    public String getNombres() {
-        return nombres;
-    }
-
-    public void setNombres(String nombres) {
-        this.nombres = nombres;
-    }
-
-    public String getApellidos() {
-        return apellidos;
-    }
-
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public int getId() {
+        return id;
     }
 
     public String getCedula() {
         return cedula;
     }
 
+    public String getNombresCompletos() {
+        return nombresCompletos;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public void setNombresCompletos(String nombresCompletos) {
+        this.nombresCompletos = nombresCompletos;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
-    public String getClave() {
-        return clave;
-    }
-
-    public void setClave(String clave) {
-        this.clave = clave;
-    }
-    
     @Override
-    public String toString(){
-        return "DATOS PERSONALES";
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", cedula='" + cedula + '\'' +
+                ", nombresCompletos='" + nombresCompletos + '\'' +
+                '}';
     }
 }
+

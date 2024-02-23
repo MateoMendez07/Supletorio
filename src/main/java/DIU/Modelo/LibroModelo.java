@@ -1,38 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package DIU.Modelo;
-
-/**
- *
- * @author tutut
- */
 public class LibroModelo {
-
     private String titulo;
     private String autor;
     private String ISBN;
     private int paginas;
-    private int edicion;
+    private String edicion;
     private String editorial;
-    private String lugarCiudad;
-    private String lugarPais;
-    private String fechaEdicion;
+    private String lugar;
+    private String fecha;
 
-    public LibroModelo() {
-    }
-
-    public LibroModelo(String titulo, String autor, String ISBN, int paginas, int edicion, String editorial, String lugarCiudad, String lugarPais, String fechaEdicion) {
+    public LibroModelo(String titulo, String autor, String ISBN, int paginas, String edicion, String editorial, String lugar, String fecha) {
         this.titulo = titulo;
         this.autor = autor;
         this.ISBN = ISBN;
         this.paginas = paginas;
         this.edicion = edicion;
         this.editorial = editorial;
-        this.lugarCiudad = lugarCiudad;
-        this.lugarPais = lugarPais;
-        this.fechaEdicion = fechaEdicion;
+        this.lugar = lugar;
+        this.fecha = fecha;
     }
 
     public String getTitulo() {
@@ -41,6 +26,14 @@ public class LibroModelo {
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public String getISBN() {
@@ -59,11 +52,11 @@ public class LibroModelo {
         this.paginas = paginas;
     }
 
-    public int getEdicion() {
+    public String getEdicion() {
         return edicion;
     }
 
-    public void setEdicion(int edicion) {
+    public void setEdicion(String edicion) {
         this.edicion = edicion;
     }
 
@@ -75,36 +68,25 @@ public class LibroModelo {
         this.editorial = editorial;
     }
 
-    public String getLugarCiudad() {
-        return lugarCiudad;
+    public String getLugar() {
+        return lugar;
     }
 
-    public void setLugarCiudad(String lugarCiudad) {
-        this.lugarCiudad = lugarCiudad;
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
     }
 
-    public String getLugarPais() {
-        return lugarPais;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setLugarPais(String lugarPais) {
-        this.lugarPais = lugarPais;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
-    public String getFechaEdicion() {
-        return fechaEdicion;
+    @Override
+    public String toString() {
+        return "Libro{" + "titulo=" + titulo + ", autor=" + autor + ", ISBN=" + ISBN + ", paginas=" + paginas + ", edicion=" + edicion + ", editorial=" + editorial + ", lugar=" + lugar + ", fecha=" + fecha + '}';
     }
-
-    public void setFechaEdicion(String fechaEdicion) {
-        this.fechaEdicion = fechaEdicion;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
+    
 }
